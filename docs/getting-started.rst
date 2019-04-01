@@ -1,6 +1,17 @@
 Getting started
 ===============
 
-This is where you describe how to get set up on a clean install, including the
-commands necessary to get the raw data (using the `sync_data_from_s3` command,
-for example), and then how to make the cleaned, final data sets.
+messenger_analyzer is a Python package build to analyze 
+conversation with one or more 
+(groups) that you add on messenger.
+The project started in 2019 by Charles Demontigny. 
+
+To install the package::
+
+    git clone https://github.com/Charles-de-Montigny/messenger_analyzer.git
+
+To analyze your conversation::
+
+    python src/analyze_convo.py
+
+
