@@ -104,10 +104,10 @@ def make_dataset(input_path):
     # Participants
     participants_df = make_participants(d)
     # Reactions
-    reactions = make_reactions(d)
-    return messages_df, participants_df
+    reactions_df = make_reactions(d)
+    return messages_df, participants_df, reactions_df
 
 
 if __name__ == '__main__':
-    messages, participants = make_dataset("data/raw/sundayrose/message_1.json")
+    messages, participants, reactions = make_dataset("data/raw/sundayrose/message_1.json")
     import pdb; pdb.set_trace()
