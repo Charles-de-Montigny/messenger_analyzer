@@ -9,11 +9,16 @@ conversation with one or more
 (groups) that you add on messenger.
 The project started in 2019 by Charles Demontigny. 
 
-To install the package::
+Install the package::
 
     git clone https://github.com/Charles-de-Montigny/messenger_analyzer.git
 
-To analyze your conversation::
+Create environnement in the terminal/cmd::
+
+    cd path_to_the_folder
+    conda create -n new environment --file requirements.txt
+
+Analyze your conversation::
 
     python src/analyze_convo.py
 
@@ -31,7 +36,7 @@ Project Organization
     │   └── raw            <- The original, immutable data dump.
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │    │
+    │    
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
