@@ -63,6 +63,20 @@ def make_participants(dict):
         tmp.append(participant)
     return pd.DataFrame(tmp)
 
+def make_text(messages_df):
+    """Returns a string that contains all the messages.
+    
+    Args:
+        messages_df: Pandas DataFrame
+
+    Returns: A pandas DataFrame
+    """
+    pass
+
+
+
+
+
 def make_reactions(dict):
     """Returns a DataFrame with the reactions.
     
