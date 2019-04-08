@@ -71,11 +71,10 @@ def make_text(messages_df):
 
     Returns: A pandas DataFrame
     """
-    pass
-
-
-
-
+    text_df = messages_df.query('content_type == "messages"')
+    text = " ".join(list(text_df.content.values))
+    split = text.split(' ')
+    return split
 
 def make_reactions(dict):
     """Returns a DataFrame with the reactions.
