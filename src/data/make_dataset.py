@@ -43,9 +43,12 @@ def make_messages(dict):
     content['content_type'] = 'messages'
 
     contents = [content]
-    content_cols = ['audio_files', 'files', 'gifs', 'photos', 'share', 'sticker', 'videos']
+    content_cols = ['files', 'gifs', 'photos', 'share', 'sticker', 'videos']
     for col in content_cols:
-        contents.append(extract_contents(messages, col))
+        try:
+            contents.append(extract_contents(messages, col))
+        except:
+            pass
     contents_df = pd.concat(contents).sort_values('id')
     messages_df = pd.merge(contents_df, messages[['sender_name', 'time', 'id']], on = 'id')
     return messages_df
